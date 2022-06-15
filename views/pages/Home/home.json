@@ -1,0 +1,31 @@
+{
+  "Header": {
+    "Classes": "float-md-start mb-0",
+    "PrimaryText": "My Awesome New Website",
+    "Logo": {
+      "url": "./logo.svg"
+    }
+  },
+  "NavLinks": {
+    "Home": {
+      "Classes": "nav-link",
+      "PrimaryText": "Home",
+      "Href": "/"
+    },
+    "About": {
+      "Classes": "nav-link",
+      "PrimaryText": "About",
+      "Href": "/about"
+    }
+  },
+  "Main": {
+    "Classes": "container",
+    "PrimaryText": "Coming soon...",
+    "SecondaryText": "Simple extension for additional pages. Repeatable patterns for extending from this template. Use what you want and toss what you don't."
+  },
+  "Footer": {
+    "Classes": "text-center",
+    "PrimaryText": "You can also share other pages JSON data with each other within the template JavaScript",
+    "SecondaryText": "Powered by @Deno"
+  }
+}
