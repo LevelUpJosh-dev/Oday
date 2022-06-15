@@ -1,4 +1,4 @@
-# ODAY
+# oday
 oday is a small JS framework built on Deno to quickly deploy an extremely performant website using Deno and deno deploy. It uses Bootstrap and jQuery currently
 because it was easy to import and I use it in my professional career. But you could modify anything like that within template very easily as it's all just CDN or ES module URL imports.
 
