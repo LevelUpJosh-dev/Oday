@@ -2,9 +2,9 @@
   "Language": "en",
   "Title": "@RedVanJosh",
   "Logo": {
-    "ico": {
-      "url": {
-        "solid": "/oday-logo-solid.ico"
+    "Url": {
+      "Ico": {
+        "url": "/oday-logo-outline-cutout.ico"
       }
     }
   },

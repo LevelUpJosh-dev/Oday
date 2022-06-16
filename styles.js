@@ -33,7 +33,7 @@ function BaseStyles() {
     .nav-masthead .nav-link {
         padding: .25rem 0;
         font-weight: 700;
-        color: rgba(255, 255, 255, .5);
+        color: #616640;
         background-color: transparent;
         border-bottom: .25rem solid transparent;
     }
@@ -48,8 +48,8 @@ function BaseStyles() {
     }
     
     .nav-masthead .active {
-        color: #fff;
-        border-bottom-color: #fff;
+        color: #3c3c20;
+        border-bottom-color: #75934e;
     }
     `;
 }
