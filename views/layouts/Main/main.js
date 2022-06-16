@@ -13,7 +13,7 @@ export default async (data) => {
                 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-                <link rel="icon" type="image/x-icon" href="${Logo.ico.url.solid}">
+                <link rel="icon" type="image/x-icon" href="${Logo.Url.Ico.url}">
                 <title>${Title}</title>
             </head>
             <body class="${Body.Classes}">
@@ -23,10 +23,19 @@ export default async (data) => {
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
                 <style>
                     ${BaseStyles()}
-
+                    /** TODO: Overrides until I finish moving bootstrap local and do cleaner overrides. Below baseStyles so it's the final styling rules applied. **/
+                    body p, body span, body a {
+                     color: #3c3c20;
+                    }
                     .btn.btn-primary {
                         background-color: #F7BF4F;
                         color: #000000;
+                    }
+                    body.bg-secondary {
+                        background-color: #d5cfb6!important; /** TODO: Using this hurts me but until refactor bootstrap to static here we are. **/
+                    }
+                    .card {
+                    
                     }
                 </style>
             </body>

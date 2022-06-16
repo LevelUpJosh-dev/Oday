@@ -1,13 +1,14 @@
 {
   "Header": {
     "Classes": "float-md-start mb-0",
-    "PrimaryText": "Oday",
+    "PrimaryText": "",
     "Logo": {
       "Url": {
         "Png": {
-          "solid": "/oday-logo-solid.png",
-          "cutout": "/oday-logo-solid-cutout.png",
-          "transparent": "/oday-logo-transparent.png"
+          "url": "/oday-logo-outline-cutout.png"
+        },
+        "Ico": {
+          "url": "/oday-logo-outline-cutout.ico"
         }
       }
     }

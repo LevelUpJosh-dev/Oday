@@ -1,10 +1,10 @@
 {
   "Language": "en",
-  "Title": "@RedVanJosh",
+  "Title": "Oday small, fast, powerful...",
   "Logo": {
-    "ico": {
-      "url": {
-        "solid": "/oday-logo-solid.ico"
+    "Url": {
+      "Ico": {
+        "url": "/oday-logo-outline-cutout.ico"
       }
     }
   },

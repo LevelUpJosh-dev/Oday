@@ -9,21 +9,23 @@ export default async () => {
         <style>
             ${BaseStyles()}
         </style>
-        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column text-white">
-          <img id="logo" src="${Header.Logo.Url.Png.cutout}" class="my-4 w-25 h-25 mx-auto" alt="logo image">
-          <header class="mb-auto">
-            <div>
-              <h2 class="${Header.Classes}">${Header.PrimaryText}</h2>
-              <nav class="my-3 nav nav-masthead justify-content-center float-md-end">
-                <a class="nav-link active ${NavLinks.Home.Classes}" aria-current="page" href="${NavLinks.Home.Href}">
-                    ${NavLinks.Home.PrimaryText}
-                </a>
-                <a class="${NavLinks.About.Classes}" href="${NavLinks.About.Href}">
-                    ${NavLinks.About.PrimaryText}
-                </a>
-              </nav>
-            </div>
-          </header>
+        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+          <img id="logo" src="${Header.Logo.Url.Png.url}" class="mt-5 mb-2 w-25 mx-auto" alt="logo image">
+          <div class="header-container">
+              <header class="mb-auto">
+                <div>
+                  <h2 class="${Header.Classes}">${Header.PrimaryText}</h2>
+                  <nav class="my-3 nav nav-masthead justify-content-center float-md-end">
+                    <a class="nav-link active ${NavLinks.Home.Classes}" aria-current="page" href="${NavLinks.Home.Href}">
+                        ${NavLinks.Home.PrimaryText}
+                    </a>
+                    <a class="${NavLinks.About.Classes}" href="${NavLinks.About.Href}">
+                        ${NavLinks.About.PrimaryText}
+                    </a>
+                  </nav>
+                </div>
+              </header>
+          </div>
 
         <div class="cover-container d-flex w-35 h-100 p-3 mx-auto flex-column">
           <a class="btn btn-primary border-dark" data-toggle="collapse" href="#collapse-section" role="button" aria-expanded="false" aria-controls="collapseExample">
@@ -37,13 +39,13 @@ export default async () => {
                 <p class="lead">${Main.PrimaryText}</p>
               </div>
             </div>
-            <p class="lead alert-success mt-2">${Main.SecondaryText}</p>
+            <p class="alert-success mt-2 p-2">${Main.SecondaryText}</p>
           </main>
 
-          <footer class="mt-auto text-white-50">
+          <footer class="mt-auto">
             <p>${Footer.PoweredByDeno}</p>
-            <p class="text-white-25">${Footer.Maintainer}</p>
-            <small class="text-white-50">${Footer.Copyright}</small>
+            <p class="maintainer">${Footer.Maintainer}</p>
+            <small class="copyright">${Footer.Copyright}</small>
           </footer>
         </div>
     `;
