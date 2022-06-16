@@ -1,9 +1,15 @@
 {
   "Header": {
     "Classes": "float-md-start mb-0",
-    "PrimaryText": "My Awesome New Website",
+    "PrimaryText": "Oday",
     "Logo": {
-      "url": "./logo.svg"
+      "Url": {
+        "Png": {
+          "solid": "/oday-logo-solid.png",
+          "cutout": "/oday-logo-solid-cutout.png",
+          "transparent": "/oday-logo-transparent.png"
+        }
+      }
     }
   },
   "NavLinks": {
@@ -20,12 +26,13 @@
   },
   "Main": {
     "Classes": "container",
-    "PrimaryText": "Coming soon...",
-    "SecondaryText": "Simple extension for additional pages. Repeatable patterns for extending from this template. Use what you want and toss what you don't."
+    "PrimaryText": "This project started out as a way to learn about this new technology I had heard about called Deno. From there it grew into seeing what was possible using Deno as my base system. After a couple weeks of playing around with the framework. I had put together a fairly effective architecture for creating and deploying a viable static site using nothing but Deno, Deno Deploy, Bootstrap and jQuery. Following in the pattern of Deno as much as I could it utilizes ES modules and has borderline zero outside dependencies currently besides those mentioned. jQuery and Bootstrap are both simple link includes that can be removed this is due to how Deno handles modules are handled in deno. So these could be replaced or removed entirely depending on your needs.",
+    "SecondaryText": "From their I decided to pare back what I had written for my own site into a static package that allows anyone to spin up a global website or app in about half hour using Deno. I hope you enjoy the project it does not claim to be anything more then a passion project. Check me out on GitHub or Twitter for more information."
   },
   "Footer": {
     "Classes": "text-center",
-    "PrimaryText": "You can also share other pages JSON data with each other within the template JavaScript",
-    "SecondaryText": "Powered by @Deno"
+    "Copyright": "Copyright © 2022 Oday",
+    "PoweredByDeno": "Powered by @Deno",
+    "Maintainer": "Written and maintained by @RedVanJosh"
   }
 }

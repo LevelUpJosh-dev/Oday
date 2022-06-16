@@ -1,6 +1,13 @@
 {
   "Language": "en",
-  "Title": "The Last Holocron",
+  "Title": "@RedVanJosh",
+  "Logo": {
+    "ico": {
+      "url": {
+        "solid": "/oday-logo-solid.ico"
+      }
+    }
+  },
   "Body": {
     "Classes": "d-flex h-100 text-center bg-secondary"
   }
