@@ -41,9 +41,9 @@ simple express like route functionality.
 ![odayLighthouseOotbMobile](https://user-images.githubusercontent.com/23381860/173934172-7aca42c4-fff6-40f7-8875-1767a23ec3d4.png)
 
 ## Lighthouse Reports
-[odayMobileTimeframe.pdf](https://github.com/RedVanJosh/Oday/files/8922298/odayMobileTimeframe.pdf)
-[odayMobile.pdf](https://github.com/RedVanJosh/Oday/files/8922301/odayMobile.pdf)
-[odayDesktop.pdf](https://github.com/RedVanJosh/Oday/files/8922302/odayDesktop.pdf)
+- [odayMobileTimeframe.pdf](https://github.com/RedVanJosh/Oday/files/8922298/odayMobileTimeframe.pdf)
+- [odayMobile.pdf](https://github.com/RedVanJosh/Oday/files/8922301/odayMobile.pdf)
+- [odayDesktop.pdf](https://github.com/RedVanJosh/Oday/files/8922302/odayDesktop.pdf)
 
 
 ## Page Size Results
