@@ -7,7 +7,6 @@ export default async () => {
   const { Header, NavLinks, Footer } = homeData;
 
   return `
-        <meta name="theme-color" content="#7952b3"/>
         <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
           <img id="logo" src="${Header.Logo.Url.Png.url}" class="mt-5 mb-2 w-25 mx-auto" alt="logo image" />
           <header class="mb-auto">

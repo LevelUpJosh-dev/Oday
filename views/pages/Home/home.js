@@ -25,11 +25,13 @@ export default async () => {
                   </nav>
                 </div>
               </header>
+            <h2>Small Fast Measured</h2>
+            <small>Curious you should be</small>
           </div>
 
         <div class="cover-container d-flex w-35 h-100 p-3 mx-auto flex-column">
           <a class="btn btn-primary border-dark" data-toggle="collapse" href="#collapse-section" role="button" aria-expanded="false" aria-controls="collapseExample">
-              Click Me :)
+              Click me to learn the story of Oday!
           </a>
         </div>
 
