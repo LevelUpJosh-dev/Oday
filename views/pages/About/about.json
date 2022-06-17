@@ -1,6 +1,6 @@
 {
-  "Main": {
-    "PrimaryText": "Build your passion simply utilizing JavaScript and the power of strings.",
-    "SecondaryText": "This template is by no means perfect, My primary goals where to make a simple framework for building a website utilizing as much JavaScript as possible."
-  }
+    "Main": {
+        "PrimaryText": "Build your passion simply utilizing JavaScript and the power of strings.",
+        "SecondaryText": "This template is by no means perfect, My primary goals where to make a simple framework for building a website utilizing as much JavaScript as possible."
+    }
 }

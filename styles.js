@@ -1,5 +1,5 @@
 function BaseStyles() {
-  return `
+    return `
         /*
      * Globals
      */
@@ -51,11 +51,25 @@ function BaseStyles() {
         color: #3c3c20;
         border-bottom-color: #75934e;
     }
+    /** TODO: Overrides until I finish moving bootstrap local and do cleaner overrides. Below baseStyles so it's the final styling rules applied. **/
+    body p, body span, body a {
+     color: #3c3c20;
+    }
+    .btn.btn-primary {
+        background-color: #F7BF4F;
+        color: #000000;
+    }
+    body.bg-secondary {
+        background-color: #d5cfb6!important; /** TODO: Using this hurts me but until refactor bootstrap to static here we are. **/
+    }
+    .card {
+    
+    }
     `;
 }
 
-function PersonalStyles () {
-  return `
+function PersonalStyles() {
+    return `
     body {
       margin-top:20px;
       color: #1a202c;
@@ -109,7 +123,7 @@ function PersonalStyles () {
   .shadow-none {
       box-shadow: none!important;
   }
-  `
+  `;
 }
 
 export { BaseStyles, PersonalStyles };

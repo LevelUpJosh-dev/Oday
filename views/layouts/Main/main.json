@@ -1,14 +1,14 @@
 {
-  "Language": "en",
-  "Title": "Oday small, fast, powerful...",
-  "Logo": {
-    "Url": {
-      "Ico": {
-        "url": "/oday-logo-outline-cutout.ico"
-      }
+    "Language": "en",
+    "Title": "Oday small, fast, powerful...",
+    "Logo": {
+        "Url": {
+            "Ico": {
+                "url": "/oday-logo-outline-cutout.ico"
+            }
+        }
+    },
+    "Body": {
+        "Classes": "d-flex h-100 text-center bg-secondary"
     }
-  },
-  "Body": {
-    "Classes": "d-flex h-100 text-center bg-secondary"
-  }
 }

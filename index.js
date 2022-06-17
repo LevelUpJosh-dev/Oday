@@ -14,13 +14,13 @@ const server = opine();
 server.use(staticFiles("public"));
 
 server.get("/", async (request, response) => {
-  response.body = await HomeShow();
-  response.send();
+    response.body = await HomeShow();
+    response.send();
 });
 
 server.get("/about", async (request, response) => {
-  response.body = await AboutShow();
-  response.send();
+    response.body = await AboutShow();
+    response.send();
 });
 
 server.listen(3000);
