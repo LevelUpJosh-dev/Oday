@@ -2,10 +2,10 @@ import loadJsonFile from "https://deno.land/x/load_json_file@v1.0.0/mod.ts";
 import { BaseStyles } from "../../../styles.js";
 
 export default async (data) => {
-  const LayoutData = await loadJsonFile("views/layouts/Main/main.json");
-  const { Language, Title, Logo, Body } = LayoutData;
+    const LayoutData = await loadJsonFile("views/layouts/Main/main.json");
+    const { Language, Title, Logo, Body } = LayoutData;
 
-  return `
+    return `
     <!DOCTYPE html>
         <html lang="${Language}">
             <head>
@@ -23,20 +23,6 @@ export default async (data) => {
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
                 <style>
                     ${BaseStyles()}
-                    /** TODO: Overrides until I finish moving bootstrap local and do cleaner overrides. Below baseStyles so it's the final styling rules applied. **/
-                    body p, body span, body a {
-                     color: #3c3c20;
-                    }
-                    .btn.btn-primary {
-                        background-color: #F7BF4F;
-                        color: #000000;
-                    }
-                    body.bg-secondary {
-                        background-color: #d5cfb6!important; /** TODO: Using this hurts me but until refactor bootstrap to static here we are. **/
-                    }
-                    .card {
-                    
-                    }
                 </style>
             </body>
         </html>

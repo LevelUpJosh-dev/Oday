@@ -2,10 +2,10 @@ import loadJsonFile from "https://deno.land/x/load_json_file@v1.0.0/mod.ts";
 import { BaseStyles } from "../../../styles.js";
 
 export default async () => {
-  const data = await loadJsonFile("views/pages/Home/home.json");
-  const { Footer, Main, NavLinks, Header } = data;
+    const data = await loadJsonFile("views/pages/Home/home.json");
+    const { Footer, Main, NavLinks, Header } = data;
 
-  return `
+    return `
         <style>
             ${BaseStyles()}
         </style>
