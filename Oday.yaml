@@ -1,7 +1,7 @@
 ####################################################################################
 # Oday Data Constants
 ####################################################################################
-conatiner: container
+container: container
 containerCover: container-cover
 containerFluid: container-fluid
 
@@ -12,7 +12,6 @@ jce: justify-content-end
 hide: d-none
 show: d-block
 
-container: container
 row: row
 collapseSection: collapse-section
 collapse: collapse
