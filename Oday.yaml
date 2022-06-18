@@ -1,0 +1,114 @@
+####################################################################################
+# Oday Data Constants
+####################################################################################
+p1: p1
+p2: p2
+p3: p3
+p4: p4
+p5: p5
+
+m1: m1
+m2: m2
+m3: m3
+m4: m4
+m5: m5
+
+containerCover: container-cover
+containerFluid: container-fluid
+
+jcs: justify-content-start
+jcc: justify-content-center
+jce: justify-content-end
+
+hide: d-none
+show: d-block
+
+container: container
+row: row
+col: col
+collapseSection: collapse-section
+collapse: collapse
+
+primaryButton: btn btn-primary
+secondaryButton: btn btn-secondary
+successButton: btn btn-success
+dangerButton: btn btn-danger
+warningButton: btn btn-warning
+infoButton: btn btn-info
+lightButton: btn btn-light
+darkButton: btn btn-dark
+linkButton: btn btn-link
+
+####################################################################################
+# Main Layout Data
+####################################################################################
+Layout:
+    lang: en
+    id: oday
+    title: Oday
+    Navigation:
+        id: oday-nav
+        classes: my-3 nav nav-masthead justify-content-center
+        content:
+            Home:
+                classes: nav-link
+                content:
+                    primary: Home
+                href: /
+            About:
+                classes: nav-link
+                content:
+                    primary: About
+                href: /about
+    Body:
+        id: oday
+        classes: d-flex text-center bg-secondary p-3 mx-auto flex-column
+    Head:
+        id: oday-head
+        classes:
+    Logo:
+        src: /oday-logo-outline-cutout.ico
+        classes: mt-5 mb-2 w-16 mx-auto
+        alt: logo-image
+    Footer:
+        id: oday-footer
+        classes: text-center
+        content:
+            primary: Created and Maintained by <a href="https://twitter.com/RedVanJosh">@RedVanJosh</a>
+            secondary: Powered by <a href="https://deno.land/">Deno</a> & <a href="https://deno.com/deploy">Deno Deploy</a>.
+            tertiary: Copyright 2020 Oday. All rights reserved.
+Resources:
+    Bootstrap:
+        css:  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        js:   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+####################################################################################
+# Page Specific Data
+####################################################################################
+Home:
+    classes:
+    Main:
+        classes: px-4 mx-auto w-75
+        id: oday-home
+        content:
+            primary: This project started out as a way to learn about this new technology I had heard about called Deno.
+                     From there it grew into seeing what was possible using Deno as my base. After a couple weeks of using it I found that...
+                     I had put together a fairly effective architecture for creating and deploying a viable static site using nothing but Deno, Deno Deploy, Bootstrap and jQuery.
+                     jQuery and Bootstrap are both simple link includes that can be removed this is due to how Deno handles modules are handled in deno. So these could be replaced or removed entirely depending on your needs.
+                     From their I decided to pare back what I had written for my own site into a static package that allows anyone to spin up a global website or app in about half hour using Deno. I hope you enjoy the project it does not claim to be anything more then a passion project. Check me out on GitHub or Twitter for more information.
+    Header:
+        content:
+            primary: Small Fast Measured
+            secondary: Curious you should be
+About:
+    classes:
+    Main:
+        id: oday-home
+        classes:
+        content:
+            primary: Build your passion simply utilizing JavaScript and the power of strings.
+            secondary: This template is by no means perfect, My primary goals where to make a simple framework for building a website utilizing as much JavaScript as possible.
+
+####################################################################################
+# Partial Specific Data
+####################################################################################

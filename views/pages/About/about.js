@@ -1,23 +1,19 @@
-import loadJsonFile from "https://deno.land/x/load_json_file@v1.0.0/mod.ts";
+import FooterTemplate from "../../partials/footer.js";
 
 export default async () => {
-    const data = await loadJsonFile("views/pages/About/about.json");
-    const homeData = await loadJsonFile("views/pages/Home/home.json");
-    const { Main } = data;
-    const { Header, NavLinks, Footer } = homeData;
+    const Oday = window.Oday;
 
     return `
-        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-          <img id="logo" src="${Header.Logo.Url.Png.url}" class="mt-5 mb-2 w-25 mx-auto" alt="logo image" />
+        <div class="${Oday.Home.classes}">
+          <img id="logo" src="${Oday.Layout.Logo.src}" class="${Oday.Layout.Logo.classes}" alt="logo image" />
           <header class="mb-auto">
             <div>
-              <h2 class="${Header.Classes}">${Header.PrimaryText}</h2>
-              <nav class="my-3 nav nav-masthead justify-content-center float-md-end text-">
-                <a class="nav-link ${NavLinks.Home.Classes}" aria-current="page" href="${NavLinks.Home.Href}">
-                    ${NavLinks.Home.PrimaryText}
+              <nav class="${Oday.Layout.Navigation.classes}">
+                <a class="nav-link ${Oday.Layout.Navigation.content.Home.classes}" aria-current="page" href="${Oday.Layout.Navigation.content.Home.href}">
+                    ${Oday.Layout.Navigation.content.Home.content.primary}
                 </a>
-                <a class="active ${NavLinks.About.Classes}" href="${NavLinks.About.Href}">
-                    ${NavLinks.About.PrimaryText}
+                <a class="active ${Oday.Layout.Navigation.content.About.classes}" href="${Oday.Layout.Navigation.content.About.href}">
+                    ${Oday.Layout.Navigation.content.About.content.primary}
                 </a>
               </nav>
             </div>
@@ -28,25 +24,21 @@ export default async () => {
               <div class="col-6">
                 <div class="card text-dark text-left">
                     <div class="card-body">
-                        <p class="lead">${Main.PrimaryText}</p>
+                        <p class="lead">${Oday.About.Main.content.primary}</p>
                     </div>
                 </div>
               </div>
               <div class="col-6 mt-2">
                 <div class="card text-dark text-left">
                     <div class="card-body">
-                        <p class="lead">${Main.SecondaryText}</p>
+                        <p class="lead">${Oday.About.Main.content.secondary}</p>
                     </div>
                 </div>
               </div>
             </div>
           </main>
-        
-          <footer class="mt-auto">
-            <p>${Footer.PoweredByDeno}</p>
-            <p class="maintainer">${Footer.Maintainer}</p>
-            <small class="copyright">${Footer.Copyright}</small>
-          </footer>
+
+          ${await FooterTemplate()}
         </div>
     `;
 };

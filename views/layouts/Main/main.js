@@ -1,29 +1,72 @@
-import loadJsonFile from "https://deno.land/x/load_json_file@v1.0.0/mod.ts";
-import { BaseStyles } from "../../../styles.js";
+const MainStyles = `
+    <style>
+        .btn-secondary,
+        .btn-secondary:hover,
+        .btn-secondary:focus {
+            color: #333;
+            text-shadow: none; /* Prevent inheritance from \`body\` */
+        }
+    
+        body {
+            text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+        }
+    
+        .cover-container {
+            max-width: 42em;
+        }
+    
+        .nav-masthead .nav-link {
+            padding: .25rem 0;
+            font-weight: 700;
+            color: #616640;
+            background-color: transparent;
+            border-bottom: .25rem solid transparent;
+        }
+    
+        .nav-masthead .nav-link:hover,
+        .nav-masthead .nav-link:focus {
+            border-bottom-color: rgba(255, 255, 255, .25);
+        }
+    
+        .nav-masthead .nav-link + .nav-link {
+            margin-left: 1rem;
+        }
+    
+        .nav-masthead .active {
+            color: #3c3c20;
+            border-bottom-color: #75934e;
+        }
+        /** TODO: Overrides until I finish moving bootstrap local and do cleaner overrides. Below baseStyles so it's the final styling rules applied. **/
+        body p, body span, body a {
+         color: #3c3c20;
+        }
+        .btn.btn-primary {
+            background-color: #F7BF4F;
+            color: #000000;
+        }
+        body.bg-secondary {
+            background-color: #d5cfb6!important; /** TODO: Using this hurts me but until refactor bootstrap to static here we are. **/
+        }
+    </style>
+`;
 
 export default async (data) => {
-    const LayoutData = await loadJsonFile("views/layouts/Main/main.json");
-    const { Language, Title, Logo, Body } = LayoutData;
-
+    const Oday = window.Oday;
     return `
     <!DOCTYPE html>
-        <html lang="${Language}">
+        <html lang="${Oday.Layout.lang}">
             <head>
                 <link rel="icon" href="logo.jpg">
-                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+                ${Oday.Resources.Bootstrap.css}
                 <meta charset="UTF-8">
                 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-                <link rel="icon" type="image/x-icon" href="${Logo.Url.Ico.url}">
-                <title>${Title}</title>
+                <link rel="icon" type="image/x-icon" href="${Oday.Layout.Logo.src}">
+                <title>${Oday.Layout.title}</title>
+                ${MainStyles}
             </head>
-            <body class="${Body.Classes}">
+            <body class="${Oday.Layout.Body.classes}">
                 ${data.Body}
-                <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-                <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> 
-                <style>
-                    ${BaseStyles()}
-                </style>
+                ${Oday.Resources.Bootstrap.js}
             </body>
         </html>
     `;
