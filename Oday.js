@@ -3,8 +3,9 @@ import staticFiles from "https://deno.land/x/static_files@1.1.6/mod.ts";
 
 import { BuildDataModal } from "./helpers/helpers.js";
 
-import { HomeShow } from "./controllers/Home.js";
 import { AboutShow } from "./controllers/About.js";
+import { HomeShow } from "./controllers/Home.js";
+import { DenoInfoShow } from "./controllers/Deno.js";
 
 await BuildDataModal();
 
@@ -19,6 +20,11 @@ server.get("/", async (request, response) => {
 
 server.get("/about", async (request, response) => {
   response.body = await AboutShow();
+  response.send();
+});
+
+server.get("/denoInfo", async (request, response) => {
+  response.body = await DenoInfoShow();
   response.send();
 });
 

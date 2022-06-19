@@ -1,6 +1,8 @@
+
 ####################################################################################
 # Bootstrap Classes
 ####################################################################################
+
 container: container
 containerCover: container-cover
 containerFluid: container-fluid
@@ -28,10 +30,12 @@ darkButton: btn btn-dark
 linkButton: btn btn-link
 
 emptyClass: empty-class-list
+active: active
 
 ####################################################################################
 # Main Layout Data
 ####################################################################################
+
 Layout:
     lang: en
     id: oday
@@ -45,6 +49,11 @@ Layout:
                 content:
                     primary: Home
                 href: /
+            DenoInfo:
+                classes: nav-link
+                content:
+                    primary: Deno Info
+                href: /denoInfo
             About:
                 classes: nav-link
                 content:
@@ -56,8 +65,12 @@ Layout:
     Head:
         id: oday-head
         Meta:
-            name: viewport
-            content: width=device-width, initial-scale=1.0
+            Viewport:
+                name: viewport
+                content: width=device-width, initial-scale=1.0
+            Description:
+                name: description
+                content: Oday is a Deno web framework
     Logo:
         href: /oday-logo-outline-cutout.png
         classes: mt-5 mb-2 mx-auto w-25
@@ -73,14 +86,17 @@ Resources:
     Bootstrap:
         css: <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         js: <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
 ####################################################################################
 # Page Specific Data
 ####################################################################################
+
 Home:
+    id: oday-home
     classes:
     Main:
         classes: px-4 mx-auto w-75
-        id: oday-home
+        id: oday-home-main
         content:
             primary: This project started out as a way to learn about this new technology I had heard about called Deno.
                      From there it grew into seeing what was possible using Deno as my base. After a couple weeks of using it I found that...
@@ -92,14 +108,31 @@ Home:
         content:
             primary: Small Fast Measured
             secondary: Curious you should be
+    Button:
+        classes: btn btn-primary border-dark
+        content:
+            primary: Click me to learn the story of Oday!
+
 About:
+    id: oday-about
     classes:
     Main:
-        id: oday-home
+        id: oday-home-main
         classes: test
         content:
             primary: Build a site using a Yaml defined data structure. This is currently in development currently Elements, Classes, IDs, Content for all OOTB HTML is setup.
             secondary: This template is by no means perfect, My primary goals where to make a simple framework for building a website utilizing as much vanilla Js as possible combined with Deno.
+
+DenoInfo:
+    id: oday-deno-info
+    classes:
+    Main:
+        classes: px-4 mx-auto w-75
+        id: oday-deno-info-main
+        content:
+            primary: Deno is a JavaScript runtime, that is heavily integrated with the V8 JavaScript runtime. It supports TypeScript and Vanilla JavaScript out of the box and has a focus on speed and security. Deno limits the access your code has to core systems unless you explicitly request otherwise. This protects systems that have no need to  be exposed for a current project. For example Deno is not allowed to access the filesystem unless the permissions is explicitly given.
+            secondary: The second piece that really drives deno even further forward. Is Deno Deploy, Deno Deploy is a modern scaling JavaScript runtime developed for Deno. It allows you to deploy your Deno applications to the edge of the web globally using only a GitHub repository with your Deno project and one page of simple configuration in your Deno Deploy dashboard. Ok so that sounds pretty call, how much does it cost? so here is craziest part it's free! While there is no a pro account which I happily pay for, the free account has more then enough bang to run an awesome production level application.
+
 ####################################################################################
 # Partial Specific Data
 ####################################################################################
