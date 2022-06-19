@@ -1,13 +1,12 @@
 import { opine } from "https://deno.land/x/opine@2.2.0/mod.ts";
 import staticFiles from "https://deno.land/x/static_files@1.1.6/mod.ts";
 
-import { parse, stringify } from "https://deno.land/std@0.144.0/encoding/yaml.ts";
+import { BuildDataModal } from "./helpers/helpers.js";
 
 import { HomeShow } from "./controllers/Home.js";
 import { AboutShow } from "./controllers/About.js";
 
-const yamlString = await Deno.readTextFile(`oday.yaml`);
-window.Oday = parse(yamlString);
+await BuildDataModal();
 
 const server = opine();
 

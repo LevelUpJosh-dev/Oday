@@ -1,6 +1,7 @@
 ####################################################################################
-# Oday Data Constants
+# Bootstrap Classes
 ####################################################################################
+container: container
 containerCover: container-cover
 containerFluid: container-fluid
 
@@ -11,7 +12,6 @@ jce: justify-content-end
 hide: d-none
 show: d-block
 
-container: container
 row: row
 collapseSection: collapse-section
 collapse: collapse
@@ -68,12 +68,11 @@ Layout:
         content:
             primary: Created and Maintained by <a href="https://twitter.com/RedVanJosh">@RedVanJosh</a>
             secondary: Powered by <a href="https://deno.land/">Deno</a> & <a href="https://deno.com/deploy">Deno Deploy</a>.
-            tertiary: Copyright 2020 Oday. All rights reserved.
+            tertiary: Copyright 2020 Oday All rights reserved.
 Resources:
     Bootstrap:
         css: <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         js: <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
 ####################################################################################
 # Page Specific Data
 ####################################################################################
@@ -99,9 +98,8 @@ About:
         id: oday-home
         classes: test
         content:
-            primary: Build your passion simply utilizing JavaScript and the power of strings.
-            secondary: This template is by no means perfect, My primary goals where to make a simple framework for building a website utilizing as much JavaScript as possible.
-
+            primary: Build a site using a Yaml defined data structure. This is currently in development currently Elements, Classes, IDs, Content for all OOTB HTML is setup.
+            secondary: This template is by no means perfect, My primary goals where to make a simple framework for building a website utilizing as much vanilla Js as possible combined with Deno.
 ####################################################################################
 # Partial Specific Data
 ####################################################################################
