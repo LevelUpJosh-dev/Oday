@@ -56,11 +56,9 @@ export default async (data) => {
     <!DOCTYPE html>
         <html lang="${Oday.Layout.lang}">
             <head>
-                <link rel="icon" href="logo.jpg">
+                <meta charset="UTF-8" name="${Oday.Layout.Head.Meta.name}" content="${Oday.Layout.Head.Meta.content}">
                 ${Oday.Resources.Bootstrap.css}
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-                <link rel="icon" type="image/x-icon" href="${Oday.Layout.Logo.src}">
+                <link rel="icon" type="image/x-icon" href="${Oday.Layout.Logo.href}">
                 <title>${Oday.Layout.title}</title>
                 ${MainStyles}
             </head>

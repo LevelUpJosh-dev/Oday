@@ -1,18 +1,6 @@
 ####################################################################################
 # Oday Data Constants
 ####################################################################################
-p1: p1
-p2: p2
-p3: p3
-p4: p4
-p5: p5
-
-m1: m1
-m2: m2
-m3: m3
-m4: m4
-m5: m5
-
 containerCover: container-cover
 containerFluid: container-fluid
 
@@ -25,9 +13,9 @@ show: d-block
 
 container: container
 row: row
-col: col
 collapseSection: collapse-section
 collapse: collapse
+card: card
 
 primaryButton: btn btn-primary
 secondaryButton: btn btn-secondary
@@ -38,6 +26,8 @@ infoButton: btn btn-info
 lightButton: btn btn-light
 darkButton: btn btn-dark
 linkButton: btn btn-link
+
+emptyClass: empty-class-list
 
 ####################################################################################
 # Main Layout Data
@@ -65,10 +55,12 @@ Layout:
         classes: d-flex text-center bg-secondary p-3 mx-auto flex-column
     Head:
         id: oday-head
-        classes:
+        Meta:
+            name: viewport
+            content: width=device-width, initial-scale=1.0
     Logo:
-        src: /oday-logo-outline-cutout.ico
-        classes: mt-5 mb-2 w-16 mx-auto
+        href: /oday-logo-outline-cutout.png
+        classes: mt-5 mb-2 mx-auto w-25
         alt: logo-image
     Footer:
         id: oday-footer
@@ -79,8 +71,8 @@ Layout:
             tertiary: Copyright 2020 Oday. All rights reserved.
 Resources:
     Bootstrap:
-        css:  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        js:   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        css: <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        js: <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 ####################################################################################
 # Page Specific Data
@@ -97,6 +89,7 @@ Home:
                      jQuery and Bootstrap are both simple link includes that can be removed this is due to how Deno handles modules are handled in deno. So these could be replaced or removed entirely depending on your needs.
                      From their I decided to pare back what I had written for my own site into a static package that allows anyone to spin up a global website or app in about half hour using Deno. I hope you enjoy the project it does not claim to be anything more then a passion project. Check me out on GitHub or Twitter for more information.
     Header:
+        classes: mb-auto text-center
         content:
             primary: Small Fast Measured
             secondary: Curious you should be
@@ -104,7 +97,7 @@ About:
     classes:
     Main:
         id: oday-home
-        classes:
+        classes: test
         content:
             primary: Build your passion simply utilizing JavaScript and the power of strings.
             secondary: This template is by no means perfect, My primary goals where to make a simple framework for building a website utilizing as much JavaScript as possible.

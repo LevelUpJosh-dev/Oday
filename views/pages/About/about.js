@@ -4,9 +4,9 @@ export default async () => {
     const Oday = window.Oday;
 
     return `
-        <div class="${Oday.Home.classes}">
-          <img id="logo" src="${Oday.Layout.Logo.src}" class="${Oday.Layout.Logo.classes}" alt="logo image" />
-          <header class="mb-auto">
+        <div class="${Oday.Home.classes || Oday.emptyClass}">
+          <img src="${Oday.Layout.Logo.href}" class="${Oday.Layout.Logo.classes}" alt="${Oday.Layout.Logo.alt}" />
+          <header class="">
             <div>
               <nav class="${Oday.Layout.Navigation.classes}">
                 <a class="nav-link ${Oday.Layout.Navigation.content.Home.classes}" aria-current="page" href="${Oday.Layout.Navigation.content.Home.href}">
@@ -18,9 +18,8 @@ export default async () => {
               </nav>
             </div>
           </header>
-        <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
           <main class=" container px-3">
-            <div class="row text-dark text-left">
+            <div class="p-2 row text-dark text-left">
               <div class="col-6">
                 <div class="card text-dark text-left">
                     <div class="card-body">
@@ -28,7 +27,7 @@ export default async () => {
                     </div>
                 </div>
               </div>
-              <div class="col-6 mt-2">
+              <div class="col-6">
                 <div class="card text-dark text-left">
                     <div class="card-body">
                         <p class="lead">${Oday.About.Main.content.secondary}</p>
@@ -39,6 +38,5 @@ export default async () => {
           </main>
 
           ${await FooterTemplate()}
-        </div>
     `;
 };
