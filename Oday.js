@@ -6,7 +6,7 @@ import { parse, stringify } from "https://deno.land/std@0.144.0/encoding/yaml.ts
 import { HomeShow } from "./controllers/Home.js";
 import { AboutShow } from "./controllers/About.js";
 
-const yamlString = await Deno.readTextFile(`oday.yaml`);
+const yamlString = await Deno.readTextFile("Oday.yaml");
 window.Oday = parse(yamlString);
 
 const server = opine();

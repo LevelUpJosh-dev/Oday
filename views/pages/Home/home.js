@@ -4,7 +4,7 @@ export default async () => {
     const Oday = window.Oday;
 
     return `
-        <div class="${Oday.Home.classes}">
+        <div class="${Oday.Home.classes || Oday.emptyClass}">
           <img id="logo" src="${Oday.Layout.Logo.href}" class="${Oday.Layout.Logo.classes}" alt="${Oday.Layout.Logo.alt}">
           <header class="mb-auto">
           <nav id="${Oday.Layout.Navigation.id}" class="${Oday.Layout.Navigation.classes}">
