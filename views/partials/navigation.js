@@ -1,4 +1,4 @@
-export default async (context) => {
+export default (context) => {
   const Oday = window.Oday;
   const { Navigation, Layout, Home, DenoInfo, About, active, emptyClass } =
     Oday;

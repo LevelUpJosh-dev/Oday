@@ -8,7 +8,7 @@ async function BuildDataModal() {
 }
 
 async function EnableSherlock() {
-  return Deno.readTextFile("./utilities/Sherlock.js");
+  return await Deno.readTextFile("./utilities/Sherlock.js");
 }
 
 export { BuildDataModal, EnableSherlock };

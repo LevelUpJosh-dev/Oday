@@ -50,7 +50,7 @@ const MainStyles = `
     </style>
 `;
 
-export default async (data) => {
+export default (data) => {
   const { Layout, Resources } = window.Oday;
   const Sherlock = "Sherlock" in window ? window.Sherlock : "";
 

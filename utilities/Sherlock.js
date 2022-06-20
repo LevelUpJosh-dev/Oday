@@ -9,19 +9,19 @@ function Sherlock() {
       }
     },
     "Patch": (selector, property, value) => {
-      let elements = Sherlock.Get(selector);
+      const elements = Sherlock.Get(selector);
       for (let index = 0; index < elements.length; index++) {
         elements[index][property] = value;
       }
     },
     "Remove": (selector) => {
-      let elements = Sherlock.Get(selector);
+      const elements = Sherlock.Get(selector);
       for (let index = 0; index < elements.length; index++) {
         elements[index].remove();
       }
     },
     "Listen": (selector, property, callback) => {
-      let elements = Sherlock.Get(selector);
+      const elements = Sherlock.Get(selector);
       for (let index = 0; index < elements.length; index++) {
         elements[index].addEventListener(property, callback);
       }
@@ -29,7 +29,7 @@ function Sherlock() {
       return elements;
     },
     "Watch": (selector, property) => {
-      let elements = Sherlock.Get(selector);
+      const elements = Sherlock.Get(selector);
       for (let index = 0; index < elements.length; index++) {
         new MutationObserver(function (mutations) {
           const mutationEvent = new Event(`suspicious-activity-${property}`);

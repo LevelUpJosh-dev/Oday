@@ -1,4 +1,4 @@
-export default async () => {
+export default () => {
   const { Layout, emptyClass } = window.Oday;
 
   return `
