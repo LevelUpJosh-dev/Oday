@@ -17,17 +17,17 @@ const server = opine();
 
 server.use(staticFiles("public"));
 
-server.get("/", async (_request, response) => {
+server.get("/", async (request, response) => {
   response.body = await HomeShow();
   response.send();
 });
 
-server.get("/about", async (_request, response) => {
+server.get("/about", async (request, response) => {
   response.body = await AboutShow();
   response.send();
 });
 
-server.get("/denoInfo", async (_request, response) => {
+server.get("/denoInfo", async (request, response) => {
   response.body = await DenoInfoShow();
   response.send();
 });
