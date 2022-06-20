@@ -1,5 +1,4 @@
-import { opine } from "https://deno.land/x/opine@2.2.0/mod.ts";
-import staticFiles from "https://deno.land/x/static_files@1.1.6/mod.ts";
+import { opine, serveStatic } from "https://deno.land/x/opine@2.2.0/mod.ts";
 
 import { BuildDataModal, EnableSherlock } from "./helpers/Helpers.js";
 
@@ -15,7 +14,7 @@ if (window.Oday.Sherlock.enabled) {
 
 const server = opine();
 
-server.use(staticFiles("public"));
+server.use(serveStatic("public"));
 
 server.get("/", async (request, response) => {
   response.body = await HomeShow();
