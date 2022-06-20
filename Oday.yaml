@@ -117,7 +117,7 @@ DenoInfo:
         classes: px-4 mx-auto w-75
         id: oday-deno-info-main
         content:
-            primary: Deno is a JavaScript runtime, that is heavily integrated with the V8 JavaScript runtime. It supports TypeScript and Vanilla JavaScript out of the box and has a focus on speed and security. Deno limits the access your code has to core systems unless you explicitly request otherwise. This protects systems that have no need to  be exposed for a current project. For example Deno is not allowed to access the filesystem unless the permissions is explicitly given.
+            primary: Deno is a modern JavaScript runtime for JavaScript and Typescript, it heavily integrates with the V8 JavaScript browser runtime. It has a focus on speed and security Deno limits the access your code has to core systems unless you explicitly request it. This protects systems that have no need to be exposed for the current project. For example Deno is not allowed to access the filesystem unless the permissions is explicitly given.
             secondary: The second piece that really drives deno even further forward. Is Deno Deploy, Deno Deploy is a modern scaling JavaScript runtime developed for Deno. It allows you to deploy your Deno applications to the edge of the web globally using only a GitHub repository with your Deno project and one page of simple configuration in your Deno Deploy dashboard. Ok so that sounds pretty call, how much does it cost? so here is craziest part it's free! While there is no a pro account which I happily pay for, the free account has more then enough bang to run an awesome production level application.
 
 ####################################################################################
