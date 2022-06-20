@@ -1,25 +1,31 @@
 export default async (context) => {
-  const { Layout, emptyClass } = window.Oday;
+  const Oday = window.Oday;
+  const { Navigation, Layout, Home, DenoInfo, About, active, emptyClass } =
+    Oday;
+  const { Logo } = Layout;
+  const { Header } = Navigation;
 
   return `
-        <header class="${emptyClass}">
-            <img src="${Layout.Logo.href}" class="${Layout.Logo.classes}" alt="${Layout.Logo.alt}" />
+        <header id="${Navigation.Header.id}" class="${
+    Navigation.classes || emptyClass
+  }">
+            <img src="${Logo.href}" class="${Logo.classes}" alt="${Logo.alt}" />
             <div>
-              <nav class="${Layout.Navigation.classes}">
-                <a class="${Layout.Navigation.content.Home.classes} ${
-    context.id === Oday.Home.id ? Oday.active : ""
-  }" aria-current="page" href="${Layout.Navigation.content.Home.href}">
-                    ${Layout.Navigation.content.Home.content.primary}
+              <nav class="${Header.classes}">
+                <a class="${Header.content.Home.classes} ${
+    context.id === Home.id ? active : ""
+  }" aria-current="page" href="${Header.content.Home.href}">
+                    ${Header.content.Home.content.primary}
                 </a>
-                <a class="${Layout.Navigation.content.DenoInfo.classes} ${
-    context.id === Oday.DenoInfo.id ? Oday.active : ""
-  }" href="${Layout.Navigation.content.DenoInfo.href}">
-                    ${Layout.Navigation.content.DenoInfo.content.primary}
+                <a class="${Header.content.DenoInfo.classes} ${
+    context.id === DenoInfo.id ? active : ""
+  }" href="${Header.content.DenoInfo.href}">
+                    ${Header.content.DenoInfo.content.primary}
                 </a>
-                <a class="${Layout.Navigation.content.About.classes} ${
-    context.id === Oday.About.id ? Oday.active : ""
-  }" href="${Layout.Navigation.content.About.href}">
-                    ${Layout.Navigation.content.About.content.primary}
+                <a class="${Header.content.About.classes} ${
+    context.id === About.id ? active : ""
+  }" href="${Header.content.About.href}">
+                    ${Header.content.About.content.primary}
                 </a>
               </nav>
             </div>

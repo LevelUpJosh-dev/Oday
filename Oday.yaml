@@ -46,25 +46,6 @@ Layout:
     lang: en
     id: oday
     title: Oday
-    Navigation:
-        id: oday-nav
-        classes: my-3 nav nav-masthead justify-content-center
-        content:
-            Home:
-                classes: nav-link
-                content:
-                    primary: Home
-                href: /
-            DenoInfo:
-                classes: nav-link
-                content:
-                    primary: Deno Info
-                href: /denoInfo
-            About:
-                classes: nav-link
-                content:
-                    primary: About
-                href: /about
     Body:
         id: oday
         classes: d-flex text-center bg-secondary p-3 mx-auto flex-column
@@ -142,3 +123,23 @@ DenoInfo:
 ####################################################################################
 # Partial Specific Data
 ####################################################################################
+Navigation:
+    Header:
+        id: oday-nav
+        classes: my-3 nav nav-masthead justify-content-center
+        content:
+            Home:
+                classes: nav-link
+                content:
+                    primary: Home
+                href: /
+            DenoInfo:
+                classes: nav-link
+                content:
+                    primary: Deno Info
+                href: /denoInfo
+            About:
+                classes: nav-link
+                content:
+                    primary: About
+                href: /about

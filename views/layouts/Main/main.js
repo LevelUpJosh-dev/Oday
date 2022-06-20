@@ -68,7 +68,9 @@ export default async (data) => {
 
                 </script>
             </head>
-            <body id="${Layout.id}" class="${Layout.Body.classes}">
+            <body id="${Layout.id}" class="${
+    Layout.Body.classes || emptyClass
+  }">
                 ${data.Body}
                 ${Resources.Bootstrap.js}
                 <script>${Sherlock}</script>

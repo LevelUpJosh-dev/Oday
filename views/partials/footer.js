@@ -1,8 +1,10 @@
 export default async () => {
-  const { Layout } = window.Oday;
+  const { Layout, emptyClass } = window.Oday;
 
   return `
-     <footer class="${Layout.Footer.classes}" style="${Layout.Footer.styles}">
+     <footer class="${
+    Layout.Footer.classes || emptyClass
+  }" style="${Layout.Footer.styles}">
         <small>${Layout.Footer.content.primary}</small>
         </br>
         <small>${Layout.Footer.content.secondary}</small>

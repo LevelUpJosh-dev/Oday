@@ -1,4 +1,4 @@
-import { DenoInfoTemplate, MainLayout } from "../templates.js";
+import { DenoInfoTemplate, MainLayout } from "./Templates.js";
 
 export async function DenoInfoShow() {
   const layoutData = {
