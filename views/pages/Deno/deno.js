@@ -2,10 +2,9 @@ import FooterTemplate from "../../partials/footer.js";
 import NavigationTemplate from "../../partials/navigation.js";
 
 export default async () => {
-    const Oday = window.Oday;
-    const { DenoInfo } = Oday;
+  const { DenoInfo } = window.Oday;
 
-    return `
+  return `
         <div class="${DenoInfo.classes || Oday.emptyClass}">
           ${await NavigationTemplate(DenoInfo)}
           <main class=" container px-3">

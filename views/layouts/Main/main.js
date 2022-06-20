@@ -51,21 +51,27 @@ const MainStyles = `
 `;
 
 export default async (data) => {
-    const Oday = window.Oday;
-    return `
+  const { Layout, Resources } = window.Oday;
+  const Sherlock = "Sherlock" in window ? window.Sherlock : "";
+
+  return `
     <!DOCTYPE html>
-        <html lang="${Oday.Layout.lang}">
+        <html lang="${Layout.lang}">
             <head>
-                <meta charset="UTF-8" name="${Oday.Layout.Head.Meta.Viewport.name}" content="${Oday.Layout.Head.Meta.Viewport.content}">
-                <meta charset="UTF-8" name="${Oday.Layout.Head.Meta.Description.name}" content="${Oday.Layout.Head.Meta.Description.content}">
-                ${Oday.Resources.Bootstrap.css}
-                <link rel="icon" type="image/x-icon" href="${Oday.Layout.Logo.href}">
-                <title>${Oday.Layout.title}</title>
+                <meta charset="UTF-8" name="${Layout.Head.Meta.Viewport.name}" content="${Layout.Head.Meta.Viewport.content}">
+                <meta charset="UTF-8" name="${Layout.Head.Meta.Description.name}" content="${Layout.Head.Meta.Description.content}">
+                ${Resources.Bootstrap.css}
+                <link rel="icon" type="image/x-icon" href="${Layout.Logo.href}">
+                <title>${Layout.title}</title>
                 ${MainStyles}
+                <script>
+
+                </script>
             </head>
-            <body class="${Oday.Layout.Body.classes}">
+            <body id="${Layout.id}" class="${Layout.Body.classes}">
                 ${data.Body}
-                ${Oday.Resources.Bootstrap.js}
+                ${Resources.Bootstrap.js}
+                <script>${Sherlock}</script>
             </body>
         </html>
     `;

@@ -2,10 +2,9 @@ import FooterTemplate from "../../partials/footer.js";
 import NavigationTemplate from "../../partials/navigation.js";
 
 export default async () => {
-    const Oday = window.Oday;
-    const { Home } = Oday;
+  const { Home } = window.Oday;
 
-    return `
+  return `
         <div class="${Home.classes || Oday.emptyClass}">
         ${await NavigationTemplate(Home)}
         <h2>${Home.Header.content.primary}</h2>

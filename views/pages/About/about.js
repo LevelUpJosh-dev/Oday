@@ -2,11 +2,11 @@ import FooterTemplate from "../../partials/footer.js";
 import NavigationTemplate from "../../partials/navigation.js";
 
 export default async () => {
-    const Oday = window.Oday;
-    const { About } = Oday;
+  const { About } = window.Oday;
 
-    return `
+  return `
         ${await NavigationTemplate(About)}
+
         <div class="${About.classes || Oday.emptyClass}">
           <main class=" container px-3">
             <div class="p-2 row text-dark text-left">
