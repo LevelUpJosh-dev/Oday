@@ -17,12 +17,6 @@ jcs: justify-content-start
 jcc: justify-content-center
 jce: justify-content-end
 
-d-flex: d-flex
-d-inline: d-inline
-d-inline-block: d-inline-block
-d-block: d-block
-d-none: d-none
-
 hide: d-none
 show: d-block
 
