@@ -1,4 +1,4 @@
-import { AboutTemplate, MainLayout } from "../templates.js";
+import { AboutTemplate, MainLayout } from "./Templates.js";
 
 export async function AboutShow() {
   const layoutData = {

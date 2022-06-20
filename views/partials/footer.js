@@ -1,14 +1,15 @@
+export default () => {
+  const { Layout, emptyClass } = window.Oday;
 
-export default async () => {
-    const Oday = window.Oday;
-
-    return `
-     <footer class="${Oday.Layout.Footer.classes}" style="${Oday.Layout.Footer.styles}">
-        <small>${Oday.Layout.Footer.content.primary}</small>
+  return `
+     <footer class="${
+    Layout.Footer.classes || emptyClass
+  }" style="${Layout.Footer.styles}">
+        <small>${Layout.Footer.content.primary}</small>
         </br>
-        <small>${Oday.Layout.Footer.content.secondary}</small>
+        <small>${Layout.Footer.content.secondary}</small>
         </br>
-        <small>${Oday.Layout.Footer.content.tertiary}</small>
+        <small>${Layout.Footer.content.tertiary}</small>
      </footer>
-    `
-}
+    `;
+};
