@@ -47,7 +47,7 @@ Layout:
     id: oday
     title: Oday
     Body:
-        id: oday
+        id: oday-layout-main
         classes: d-flex text-center bg-secondary p-3 mx-auto flex-column
     Head:
         id: oday-head
