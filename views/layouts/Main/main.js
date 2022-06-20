@@ -64,13 +64,8 @@ export default (data) => {
                 <link rel="icon" type="image/x-icon" href="${Layout.Logo.href}">
                 <title>${Layout.title}</title>
                 ${MainStyles}
-                <script>
-
-                </script>
             </head>
-            <body id="${Layout.id}" class="${
-    Layout.Body.classes || emptyClass
-  }">
+            <body id="${Layout.id}" class="${Layout.Body.classes || emptyClass}">
                 ${data.Body}
                 ${Resources.Bootstrap.js}
                 <script>${Sherlock}</script>
