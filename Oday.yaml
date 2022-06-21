@@ -85,20 +85,20 @@ Home:
         classes: px-4 mx-auto w-75
         id: oday-home-main
         content:
-            primary: This project started out as a way to learn about this new technology I had heard about called Deno.
-                     From there it grew into seeing what was possible using Deno as my base. After a couple weeks of using it I found that...
-                     I had put together a fairly effective architecture for creating and deploying a viable static site using nothing but Deno, Deno Deploy, Bootstrap and jQuery.
-                     jQuery and Bootstrap are both simple link includes that can be removed this is due to how Deno handles modules are handled in deno. So these could be replaced or removed entirely depending on your needs.
-                     From their I decided to pare back what I had written for my own site into a static package that allows anyone to spin up a global website or app in about half hour using Deno. I hope you enjoy the project it does not claim to be anything more then a passion project. Check me out on GitHub or Twitter for more information.
+            primary: This project started as a way to learn about this new technology I had heard about, called Deno.
+                     From there, my fascination with the runtime grew into a drive to create and see what was possible using Deno as my base runtime. After a couple weeks of using it,
+                     I found that I had created an effective architecture for developing and deploying a viable static site using nothing but Deno, Deno Deploy, and Bootstrap.
+                     Bootstrap is a simple link included via the Bootstrap cached package on jsDelivr. If you don't want to use Bootstrap, the link can simply be removed from the Html due to how Deno handles modules and dependencies in deno. So these could be replaced or removed entirely depending on your needs.
+                     From there, I decided to pare back what I had written for my own site into a static package allowing anyone to spin up a global website or app in about half an hour using Deno. I hope you enjoy the project. It does not claim to be anything more than a passion project. Check me out on GitHub or Twitter for more information.
     Header:
         classes: mb-auto text-center
         content:
             primary: Small Fast Measured
             secondary: Curious you should be
-    Button:
-        classes: btn btn-primary border-dark
-        content:
-            primary: Click me to learn the story of Oday!
+        Button:
+            classes: btn btn-primary border-dark
+            content:
+                primary: Click me to learn the story of Oday!
 
 About:
     id: oday-about
@@ -107,8 +107,11 @@ About:
         id: oday-home-main
         classes: test
         content:
-            primary: Build a site using a Yaml defined data structure. This is currently in development currently Elements, Classes, IDs, Content for all OOTB HTML is setup.
-            secondary: This template is by no means perfect, My primary goals where to make a simple framework for building a website utilizing as much vanilla Js as possible combined with Deno.
+            primary: Build a site using a Yaml-defined data structure allowing you to manage and modify the look and feel of your site with simple Key, Value inputs in a clean data modal. This feature is currently still in development; Oday now supports Elements, Classes, IDs, and Content for all out-of-the-box templates and partials within the data modal.
+                     Extending the data modal is as simple as adding the Keys and Values to your Oday.yaml and deconstructing those parsed modules in your template module. From there, you can utilize your data values as needed.
+            secondary: This template is, at its core, a passion project built from my desire to master JavaScript. 
+                       Oday aims to be a simplistic, highly performant foundation for any web project you think might be interesting. 
+                       In service to this goal, I work everyday to master new skills and refine my skill set nothing else this project has helped me become and even better developer.
 
 DenoInfo:
     id: oday-deno-info
@@ -117,8 +120,17 @@ DenoInfo:
         classes: px-4 mx-auto w-75
         id: oday-deno-info-main
         content:
-            primary: Deno is a modern JavaScript runtime for JavaScript and Typescript, it heavily integrates with the V8 JavaScript browser runtime. It has a focus on speed and security Deno limits the access your code has to core systems unless you explicitly request it. This protects systems that have no need to be exposed for the current project. For example Deno is not allowed to access the filesystem unless the permissions is explicitly given.
-            secondary: The second piece that really drives deno even further forward. Is Deno Deploy, Deno Deploy is a modern scaling JavaScript runtime developed for Deno. It allows you to deploy your Deno applications to the edge of the web globally using only a GitHub repository with your Deno project and one page of simple configuration in your Deno Deploy dashboard. Ok so that sounds pretty call, how much does it cost? so here is craziest part it's free! While there is no a pro account which I happily pay for, the free account has more then enough bang to run an awesome production level application.
+            primary: Deno is a modern runtime which can run both JavaScript and Typescript natively, it was developed heavily with the V8 runtime in mind. To create a sense or parity between browser and server-side development.
+                     It has a focus on performance and security, Deno limits the access your code has to core systems unless permission is given otherwise. This protects systems that have no need to be exposed for the current project. 
+                     For example Deno is not allowed to access the filesystem (reading or writing files) unless the permissions is explicitly given.
+            secondary: The second piece that drives Deno even further forward is in my mind. Is Deno Deploy, Deno Deploy is a modern scaling JavaScript runtime developed for Deno. It allows you to deploy your Deno applications to the edge of the web
+                       globally using only a GitHub repository with your Deno project and one page of simple configuration in your Deno Deploy dashboard. Ok, so that sounds pretty cool; how much does it cost? 
+                       So here is the craziest part it's free! While there is a pro account which I happily pay for, the free version has more than enough bang to run an excellent production-level application.
+    Header:
+        classes:
+        id:
+        content:
+            primary: What is Deno and Deno Deploy?
 
 ####################################################################################
 # Partial Specific Data
