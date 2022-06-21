@@ -9,6 +9,7 @@ export default async () => {
           ${await NavigationTemplate(DenoInfo)}
           <main class=" container px-3">
             <div class="p-2 row text-dark text-left">
+              <h3>${DenoInfo.Header.content.primary}</h3>
               <div class="col-6">
                 <div class="card text-dark text-left">
                     <div class="card-body">
