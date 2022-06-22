@@ -1,70 +1,69 @@
 ## Small Fast Measured
 
-Oday is a small but powerful JS framework built on Deno to quickly deploy an
-extremely performant website using Deno and deno deploy. It uses Bootstrap and
-jQuery currently because it was easy to import and I use it in my professional
-career. But you could modify anything like that within template very easily as
-it's all just CDN or ES module URL imports.
+Hello, my name is Joshua Rei; I am Sr. Full Stack Developer with Red Van Workshop.
 
-My goal was to design a architecture that was all JavaScript files. While we do
-work with HTML and CSS in a raw string form this project is 100% JS driven in
-terms of files.
+I am a passionate, creative individual with a drive to learn and create. Over the years.
+I have spent time on many personal projects. Which I have been too afraid to expose in any 
+public forum. So here goes nothing...
+
+If you end up reading this, if nothing else. Thanks for your interest, whether it's in my 
+- Project/s
+- Articles (More to Come)
+- Videos (More to Come)
+
+### Your interest and time are appreciated. Everything I do is to educate myself and my peers.
+
+Oday is a small, fast JS framework built on Deno. It quickly allows you to deploy an
+extremely performant website using Deno and Deno deploy. It uses Bootstrap 5 as a toolkit for
+creating templates and consistent experiences using class-based styling. Once you use the template, you are free to use
+whatever modules can be included in Deno proper and some cross Deno/Browser modules.
+Currently, Bootstrap is
+the only dependency in the project. Because of the nature of Deno's dependency management, simply removing the Bootstrap inclusion is
+all that is required to remove this dependency. Due to the nature of Oday, you could just remove that entry in the Oday.YAML data modal or toggle Resource enable flag. More on this later.
+
+My goal was to design an architecture that was as close to pure JavaScript as I could make it. 
+
+## Why? 
+
+Deno feels like a natural transition in web and server-side JavaScript development. Continue to align and gain parity with modern browser and JavaScript standards. In doing so, the hope is we can create fluid, practical functionality that, in many cases, work in both server-side JavaScript and the V8 runtime.
 
 ### From the root of the package run the following command in your local terminal.
 
 ```JavaScript
 deno run --allow-net --allow-read index.js
 ```
+- Where are running Opine so we need --allow-net
+- To build out our initial data modal we parse Oday.yaml so we need --allow-read
 
-You could also add the --watch command if you doing active development and don't
-want to restart the runtime for each change.
+You could also add the --watch flag to the command, if you doing active development and don't
+want to restart Deno on each change.
 
-### index.js
+##Caveat Here 
+Due to how Deno and Deno Deploy run our YAML data modal is parsed on the initial deploy.
+So the watcher currently won't see changes at that layer. 
+TBD: Script to help the watcher notice the YAML changes
 
-This is where you base routes and your primary controller includes happen
-specifically data from the request into a controller module and then back and
-send on the response.
+### Oday.yaml
+This is the oday data modal, as long as it's valid YAML you can add it to the data modal and
+acces it at window.Oday. This currently drives template classes, content, id, links, scripts etc.
 
-### templates.js
+### Oday.js
 
-Central module takes in all page, layout or other template Js files and then
-exports them as a complete template bundle which can be deconstructed.
+This is where you base routes and your primary controller includes occur. We also
+setup some global variables attched to our serverside window object.
 
-### styles.js
+### Templates.js
 
-Simple module exports functions which return template literals of raw style
-strings I plan to adjust this in some form as working with CSS in raw string in
-editor is blah.
+Central funnel for templates, takes in all template module exports from the various
+pages and partials and exports those as one collection. These can then be included 
+and deconstruted using standard ES module syntax.
 
 ### /views
 
-Contains all your pages and layout JS files modules that export functions that
-reutnr template strings of HTML.
+Contains all your page and layout JS modules exports these return template literals populated
+with data from the Oday data modal.
 
 ### /controllers
 
-Handle the wrapper process of wrapping a layout around the individual pieces of
-the template and then populate and combine those into the finished raw html page
-string.
-
-Page Data Driven by JSON serverside. ESModules thoughtout async/await syntax for
-processing file data during module processing. simple express like route
-functionality.
-
-## Desktop Lighthouse OOTB
-
-![odayLighthouseOotbDesktop](https://user-images.githubusercontent.com/23381860/173934171-1b4990c8-63d3-486b-96c2-1b129a68d6c3.png)
-
-## Mobile Lighthouse OOTB
-
-![odayLighthouseOotbMobile](https://user-images.githubusercontent.com/23381860/173934172-7aca42c4-fff6-40f7-8875-1767a23ec3d4.png)
-
-## Lighthouse Reports
-
-- [odayMobileTimeframe.pdf](https://github.com/RedVanJosh/Oday/files/8922298/odayMobileTimeframe.pdf)
-- [odayMobile.pdf](https://github.com/RedVanJosh/Oday/files/8922301/odayMobile.pdf)
-- [odayDesktop.pdf](https://github.com/RedVanJosh/Oday/files/8922302/odayDesktop.pdf)
-
-## Page Size Results
-
-![chrome_19vC8a78vN](https://user-images.githubusercontent.com/23381860/174160817-79f58ae6-bc71-4448-8ac7-b8ef9b8924a5.png)
+The controllers drive template configuration. They allow us to provide context to our current page render
+as well as allow us to wrap partials and othe raddtional data / templates to create our complete page.
