@@ -31,14 +31,13 @@ Deno feels like a natural transition in web and server-side JavaScript developme
 
 # **WARNING**
 This has been in development for all of 2-3 weeks, I plan to use it to build out some of my own personal proejcts.
-
 This said if you want to fork this template and try it out you'll find all the info you need below.
 
 
 ### From the root of the package run the following command in your local terminal.
 
 ```JavaScript
-deno run --allow-net --allow-read index.js
+deno run --allow-net --allow-read Oday.js
 ```
 - Where are running Opine so we need --allow-net
 - To build out our initial data modal we parse Oday.yaml so we need --allow-read
