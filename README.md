@@ -1,6 +1,6 @@
 ## Small Fast Measured
 
-Hello, my name is Joshua Rei; I am Sr. Full Stack Developer with Red Van Workshop.
+Hello, my name is Joshua Rei, I am Sr. Full Stack Developer with Red Van Workshop.
 
 I am a passionate, creative individual with a drive to learn and create. Over the years.
 I have spent time on many personal projects. Which I have been too afraid to expose in any 
