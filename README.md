@@ -27,6 +27,14 @@ My goal was to design an architecture that was as close to pure JavaScript as I 
 
 Deno feels like a natural transition in web and server-side JavaScript development. Continue to align and gain parity with modern browser and JavaScript standards. In doing so, the hope is we can create fluid, practical functionality that, in many cases, work in both server-side JavaScript and the V8 runtime.
 
+---
+
+# **WARNING**
+This has been in development for all of 2-3 weeks, I plan to use it to build out some of my own personal proejcts.
+
+This said if you want to fork this template and try it out you'll find all the info you need below.
+
+
 ### From the root of the package run the following command in your local terminal.
 
 ```JavaScript
@@ -38,14 +46,15 @@ deno run --allow-net --allow-read index.js
 You could also add the --watch flag to the command, if you doing active development and don't
 want to restart Deno on each change.
 
-##Caveat Here 
-Due to how Deno and Deno Deploy run our YAML data modal is parsed on the initial deploy.
-So the watcher currently won't see changes at that layer. 
-TBD: Script to help the watcher notice the YAML changes
+**Caveat Here** 
+Due to how Deno and Deno Deploy run static until restarted or until a new deployment occurs.
+Our YAML data modal is parsed on the initial deploy so the watcher currently won't see changes at that layer. 
+TBD: Script to help the watcher notice the YAML changes and trigger the renew on the resource.
 
 ### Oday.yaml
 This is the oday data modal, as long as it's valid YAML you can add it to the data modal and
-acces it at window.Oday. This currently drives template classes, content, id, links, scripts etc.
+acces it at window.Oday in the global project. This currently drives template classes, content, id, links, scripts etc.
+This makes it easy to control content, look and feel of a given page once it's been created.
 
 ### Oday.js
 
