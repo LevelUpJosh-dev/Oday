@@ -52,23 +52,25 @@ const MainStyles = `
 
 export default (data) => {
   const { Layout, Resources } = window.Oday;
-  const Sherlock = "Sherlock" in window ? window.Sherlock : "";
+  const { Bootstrap, Sherlock } = Resources;
 
   return `
     <!DOCTYPE html>
         <html lang="${Layout.lang}">
             <head>
+                <script>
+                    ${window.Sherlock || ""}
+                </script>
+                ${Bootstrap.enabled ? Bootstrap.css : ""}
                 <meta charset="UTF-8" name="${Layout.Head.Meta.Viewport.name}" content="${Layout.Head.Meta.Viewport.content}">
                 <meta charset="UTF-8" name="${Layout.Head.Meta.Description.name}" content="${Layout.Head.Meta.Description.content}">
-                ${Resources.Bootstrap.css}
                 <link rel="icon" type="image/x-icon" href="${Layout.Logo.href}">
                 <title>${Layout.title}</title>
                 ${MainStyles}
             </head>
             <body id="${Layout.id}" class="${Layout.Body.classes || emptyClass}">
                 ${data.Body}
-                ${Resources.Bootstrap.js}
-                <script>${Sherlock}</script>
+                ${Bootstrap.enabled ? Bootstrap.js : ""}
             </body>
         </html>
     `;

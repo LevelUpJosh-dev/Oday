@@ -1,16 +1,12 @@
 import { opine, serveStatic } from "https://deno.land/x/opine@2.2.0/mod.ts";
 
-import { BuildDataModal, EnableSherlock } from "./helpers/Helpers.js";
+import { BuildDataModal } from "./helpers/Helpers.js";
 
 import { AboutShow } from "./controllers/About.js";
 import { HomeShow } from "./controllers/Home.js";
 import { DenoInfoShow } from "./controllers/Deno.js";
 
 await BuildDataModal();
-
-if (window.Oday.Sherlock.enabled) {
-  window.Sherlock = await EnableSherlock();
-}
 
 const server = opine();
 
