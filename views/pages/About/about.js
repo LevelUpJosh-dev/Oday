@@ -21,6 +21,7 @@ export default async () => {
                 <div class="card text-dark text-left">
                     <div class="card-body">
                         <p class="lead">${About.Main.content.secondary}</p>
+                        <h3>${About.Main.content.tertiary}</h3>
                     </div>
                 </div>
               </div>
