@@ -4,11 +4,13 @@ async function BuildDataModal() {
   const yamlString = await Deno.readTextFile("Oday.yaml");
   window.Oday = parse(yamlString);
 
-  return window.Oday;
+  if (window.Oday.Resources.Sherlock.enabled) {
+    await BuildSherlock();
+  }
 }
 
-async function EnableSherlock() {
-  return await Deno.readTextFile("./utilities/Sherlock.js");
+async function BuildSherlock() {
+  window.Sherlock = await Deno.readTextFile("./utilities/Sherlock.js");
 }
 
-export { BuildDataModal, EnableSherlock };
+export { BuildDataModal };

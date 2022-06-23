@@ -1,5 +1,6 @@
 import FooterTemplate from "../../partials/footer.js";
 import NavigationTemplate from "../../partials/navigation.js";
+import AboutMePartial from "../../partials/aboutMe.js";
 
 export default async () => {
   const { Home, emptyClass } = window.Oday;
@@ -8,23 +9,10 @@ export default async () => {
   return `
         <div class="${Home.classes || emptyClass}">
             ${await NavigationTemplate(Home)}
+          <main class="${Home.Main.classes}">
             <h2>${Header.content.primary}</h2>
             <small>${Header.content.secondary}</small>
-
-          <div class="p-3">
-            <a class="${Header.Button.classes}" data-bs-toggle="collapse" data-bs-target="#collapse-section" role="button" aria-expanded="false">
-              ${Header.Button.content.primary}
-            </a>
-          </div>
-
-          <main class="${Home.Main.classes}">
-            <div id="collapse-section"  class="card text-dark collapse text-break">
-              <div class="card">
-                  <div class="card-body">
-                    <p class="lead">${Main.content.primary}</p>
-                  </div>
-                </div>
-            </div>
+            ${await AboutMePartial()}
           </main>
           ${await FooterTemplate()}
         </div>
