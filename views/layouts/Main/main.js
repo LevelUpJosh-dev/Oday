@@ -51,23 +51,27 @@ const MainStyles = `
 `;
 
 export default (data) => {
-  const { Layout, Sherlock, Bootstrap } = window.Oday;
+  const { Layout, Resources } = window.Oday;
+  const { Bootstrap, Sherlock } = Resources;
+  const { Head, Body, Logo, title, lang, id } = Layout;
 
   return `
     <!DOCTYPE html>
-        <html lang="${Layout.lang}">
+        <html lang="${lang}">
             <head>
-                <meta charset="UTF-8" name="${Layout.Head.Meta.Viewport.name}" content="${Layout.Head.Meta.Viewport.content}">
-                <meta charset="UTF-8" name="${Layout.Head.Meta.Description.name}" content="${Layout.Head.Meta.Description.content}">
-                ${Resources.Bootstrap.css}
-                <link rel="icon" type="image/x-icon" href="${Layout.Logo.href}">
-                <title>${Layout.title}</title>
+                <script>
+                    ${window.Sherlock || ""}
+                </script>
+                ${Bootstrap.enabled ? Bootstrap.css : ""}
+                <meta charset="UTF-8" name="${Head.Meta.Viewport.name}" content="${Head.Meta.Viewport.content}">
+                <meta charset="UTF-8" name="${Head.Meta.Description.name}" content="${Head.Meta.Description.content}">
+                <link rel="icon" type="image/x-icon" href="${Logo.href}">
+                <title>${title}</title>
                 ${MainStyles}
             </head>
-            <body id="${Layout.id}" class="${Layout.Body.classes || emptyClass}">
+            <body id="${id}" class="${Body.classes || emptyClass}">
                 ${data.Body}
-                ${Bootstrap.enabled ? Resources.Bootstrap.js : ''}
-                <script>${Sherlock}</script>
+                ${Bootstrap.enabled ? Bootstrap.js : ""}
             </body>
         </html>
     `;

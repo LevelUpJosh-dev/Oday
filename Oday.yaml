@@ -1,13 +1,14 @@
 ####################################################################################
-# Integration and Functionality Toggles
+# Integration and Functionality Configurations
 ####################################################################################
-Sherlock:
-    enabled: true
-    js: ./utilities/Sherlock.js
-Bootstrap:
-    enabled: false
-    css: <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    js: <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+Resources:
+    Bootstrap:
+        enabled: true
+        css: <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        js: <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    Sherlock:
+        enabled: true
+        path: ./utilities/Sherlock.js
 
 
 ####################################################################################
@@ -53,7 +54,7 @@ Layout:
     title: Oday
     Body:
         id: oday
-        classes: d-flex text-center bg-secondary p-3 mx-auto flex-column
+        classes: d-flex text-center bg-secondary mx-auto flex-column px-4 w-75
     Head:
         id: oday-head
         Meta:
@@ -69,7 +70,7 @@ Layout:
         alt: logo-image
     Footer:
         id: oday-footer
-        classes: text-center
+        classes: text-center pt-3
         content:
             primary: Created and Maintained by <a href="https://twitter.com/RedVanJosh">@RedVanJosh</a>
             secondary: Powered by <a href="https://deno.land/">Deno</a> & <a href="https://deno.com/deploy">Deno Deploy</a>.
@@ -108,11 +109,22 @@ About:
         id: oday-home-main
         classes: test
         content:
-            primary: Build a site using a Yaml-defined data structure allowing you to manage and modify the look and feel of your site with simple Key, Value inputs in a clean data modal. This feature is currently still in development; Oday now supports Elements, Classes, IDs, and Content for all out-of-the-box templates and partials within the data modal.
-                     Extending the data modal is as simple as adding the Keys and Values to your Oday.yaml and deconstructing those parsed modules in your template module. From there, you can utilize your data values as needed.
-            secondary: This template is, at its core, a passion project built from my desire to master JavaScript. 
-                       Oday aims to be a simplistic, highly performant foundation for any web project you think might be interesting. 
-                       In service to this goal, I work everyday to master new skills and refine my skill set nothing else this project has helped me become and even better developer.
+            primary: Oday is a small, fast JS framework built on Deno. It quickly allows you to deploy an extremely performant website using Deno and Deno deploy. 
+                     It uses Bootstrap 5 as a toolkit for creating templates and consistent experiences using class-based styling. 
+                     Once you use the template, you are free to use whatever modules can be included in Deno proper and some cross Deno/Browser modules. 
+                     Currently, Bootstrap is the only dependency in the project. Because of the nature of Deno's dependency management, simply removing the Bootstrap inclusion is all that is required to remove this dependency. 
+                     Due to the nature of Oday, you could just remove that entry in the Oday.YAML data modal or toggle Resource enable flag. More on this later.
+            secondary: This has been in development for all of 2-3 weeks, I plan to use it to build out some of my own personal projects. That said if you have an interest 
+                       and want to fork this template and try it out you'll find all the info you need in the Oday GitHub repository.
+            tertiary: <a href="https://github.com/RedVanJosh/Oday">Oday GitHub</a>
+    Outro:
+        classes: text-center
+        content:
+            primary: Who is Red Van Josh?
+            secondary: I am a full stack software engineer and JavaScript lover. I currently spend my days writing code and
+                       collaborating with all the amazing folks at The Red Van Workshop. I am happy to talk code, star wars or movies.
+                       I look to learn something new everyday and I aim to make people laugh. If you interested in me
+                       or my projects feel free to follow me on Twitter or GitHub.
 
 DenoInfo:
     id: oday-deno-info
@@ -121,8 +133,9 @@ DenoInfo:
         classes: px-4 mx-auto w-75
         id: oday-deno-info-main
         content:
-            primary: Deno is a modern runtime which can run both JavaScript and Typescript natively, it was developed heavily with the V8 runtime in mind. To create a sense or parity between browser and server-side development.
-                     It has a focus on performance and security, Deno limits the access your code has to core systems unless permission is given otherwise. This protects systems that have no need to be exposed for the current project. 
+            primary: Deno is a modern runtime built to run JavaScript and Typescript, it was developed to mirror many of the browser concepts. 
+                     this creates a sense or parity between browser and server-side development. It has a focus on performance and security, 
+                     Deno limits the access your code has to core systems unless permission is given otherwise. This protects systems that have no need to be exposed for the current project. 
                      For example Deno is not allowed to access the filesystem (reading or writing files) unless the permissions is explicitly given.
             secondary: The second piece that drives Deno even further forward is in my mind. Is Deno Deploy, Deno Deploy is a modern scaling JavaScript runtime developed for Deno. It allows you to deploy your Deno applications to the edge of the web
                        globally using only a GitHub repository with your Deno project and one page of simple configuration in your Deno Deploy dashboard. Ok, so that sounds pretty cool; how much does it cost? 
@@ -156,3 +169,32 @@ Navigation:
                 content:
                     primary: About
                 href: /about
+
+InfoTable:
+    id: oday-info-table
+    classes:
+    Main:
+        classes: px-4 mx-auto w-75
+        id: oday-info-table-main
+        content:
+            primary: Deno is a modern runtime built to run JavaScript and Typescript, it was developed to mirror many of the browser concepts. 
+                     this creates a sense or parity between browser and server-side development. It has a focus on performance and security, 
+                     Deno limits the access your code has to core systems unless permission is given otherwise. This protects systems that have no need to be exposed for the current project. 
+                     For example Deno is not allowed to access the filesystem (reading or writing files) unless the permissions is explicitly given.
+            secondary: The second piece that drives Deno even further forward is in my mind. Is Deno Deploy, Deno Deploy is a modern scaling JavaScript runtime developed for Deno. It allows you to deploy your Deno applications to the edge of the web
+                       globally using only a GitHub repository with your Deno project and one page of simple configuration in your Deno Deploy dashboard. Ok, so that sounds pretty cool; how much does it cost? 
+                       So here is the craziest part it's free! While there is a pro account which I happily pay for, the free version has more than enough bang to run an excellent production-level application.
+AboutMe:
+    id: oday-about-me
+    classes:
+    Main:
+        classes: px-4 mx-auto w-75
+        id: oday-deno-info-main
+        content:
+            primary: Deno is a modern runtime built to run JavaScript and Typescript, it was developed to mirror many of the browser concepts.
+                this creates a sense or parity between browser and server-side development. It has a focus on performance and security,
+                Deno limits the access your code has to core systems unless permission is given otherwise. This protects systems that have no need to be exposed for the current project.
+                For example Deno is not allowed to access the filesystem (reading or writing files) unless the permissions is explicitly given.
+            secondary: The second piece that drives Deno even further forward is in my mind. Is Deno Deploy, Deno Deploy is a modern scaling JavaScript runtime developed for Deno. It allows you to deploy your Deno applications to the edge of the web
+                globally using only a GitHub repository with your Deno project and one page of simple configuration in your Deno Deploy dashboard. Ok, so that sounds pretty cool; how much does it cost?
+                So here is the craziest part it's free! While there is a pro account which I happily pay for, the free version has more than enough bang to run an excellent production-level application.

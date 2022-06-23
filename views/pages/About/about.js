@@ -5,9 +5,8 @@ export default async () => {
   const { About, emptyClass } = window.Oday;
 
   return `
-        ${await NavigationTemplate(About)}
-
         <div class="${About.classes || emptyClass}">
+          ${await NavigationTemplate(About)}
           <main class=" container px-3">
             <div class="p-2 row text-dark text-left">
               <div class="col-6">
