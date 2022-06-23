@@ -66,12 +66,12 @@ Central funnel for templates, takes in all template module exports from the vari
 pages and partials and exports those as one collection. These can then be included 
 and deconstruted using standard ES module syntax.
 
-### /views
+### Views
 
 Contains all your page and layout JS modules exports these return template literals populated
 with data from the Oday data modal.
 
-### /controllers
+### Controllers
 
 The controllers drive template configuration. They allow us to provide context to our current page render
 as well as allow us to wrap partials and othe raddtional data / templates to create our complete page.
