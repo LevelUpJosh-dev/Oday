@@ -51,8 +51,7 @@ const MainStyles = `
 `;
 
 export default (data) => {
-  const { Layout, Resources } = window.Oday;
-  const Sherlock = "Sherlock" in window ? window.Sherlock : "";
+  const { Layout, Sherlock, Bootstrap } = window.Oday;
 
   return `
     <!DOCTYPE html>
@@ -67,7 +66,7 @@ export default (data) => {
             </head>
             <body id="${Layout.id}" class="${Layout.Body.classes || emptyClass}">
                 ${data.Body}
-                ${Resources.Bootstrap.js}
+                ${Bootstrap.enabled ? Resources.Bootstrap.js : ''}
                 <script>${Sherlock}</script>
             </body>
         </html>
