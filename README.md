@@ -27,8 +27,6 @@ My goal was to design an architecture that was as close to pure JavaScript as I 
 
 Deno feels like a natural transition in web and server-side JavaScript development. Continue to align and gain parity with modern browser and JavaScript standards. In doing so, the hope is we can create fluid, practical functionality that, in many cases, work in both server-side JavaScript and the V8 runtime.
 
----
-
 # **WARNING**
 This has been in development for all of 2-3 weeks, I plan to use it to build out some of my own personal proejcts.
 This said if you want to fork this template and try it out you'll find all the info you need below.
