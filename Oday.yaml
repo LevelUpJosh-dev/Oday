@@ -184,6 +184,7 @@ InfoTable:
             secondary: The second piece that drives Deno even further forward is in my mind. Is Deno Deploy, Deno Deploy is a modern scaling JavaScript runtime developed for Deno. It allows you to deploy your Deno applications to the edge of the web
                        globally using only a GitHub repository with your Deno project and one page of simple configuration in your Deno Deploy dashboard. Ok, so that sounds pretty cool; how much does it cost? 
                        So here is the craziest part it's free! While there is a pro account which I happily pay for, the free version has more than enough bang to run an excellent production-level application.
+
 AboutMe:
     id: oday-about-me
     classes:
